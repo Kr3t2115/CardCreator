@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  font-family: "Space Grotesk";
+}
+
+.left {
+  float: left;
+  width: 30vw;
+  height: 100vh;
+  background-image: url("./images/bg-main-desktop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cardFront {
+  border-radius: 5px;
+  width: 30%;
+  height: 25%;
+  background-image: url("./images/bg-card-front.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 23%;
+  left: 10%;
+}
+
+.cardFront svg {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+
+.cardFront h1 {
+  position: absolute;
+  top: 55%;
+  left: 10%;
+  color: #ffffff;
+  font-size: 28px;
+}
+
+.cardFront h3 {
+  position: absolute;
+  top: 80%;
+  left: 10%;
+  color: white;
+  font-size: 12px;
+}
+.cardFront h4 {
+  position: absolute;
+  top: 80%;
+  right: 10%;
+  color: white;
+  font-size: 12px;
+}
+
+.cardBack {
+  border-radius: 5px;
+  width: 30%;
+  height: 25%;
+  background-image: url("./images/bg-card-back.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 52%;
+  left: 17%;
+}
+
+.cardBack h3 {
+  position: absolute;
+  top: 45%;
+  right: 20%;
+  color: white;
+}
+
+.right {
+  float: left;
+  width: 70vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.cardData {
+  width: 35%;
+}
+
+.cardData label {
+  font-size: 18px;
+  color: hsl(278, 68%, 11%);
+  font-weight: 500;
+  font-family: "Space Grotesk";
+}
+.cardData input {
+  font-family: "Space Grotesk";
+  margin-top: 4px;
+}
+.cardData span {
+  color: hsl(0, 100%, 66%);
+  display: none;
+}
+
+.cardData input:active {
+  border: 1px solid linear-gradient(hsl(249, 99%, 64%) to hsl(278, 94%, 30%));
+}
+
+.error {
+  border: 1px solid hsl(0, 100%, 66%) !important;
+}
+
+.inputAllSize {
+  width: 100%;
+  height: 5vh;
+  border-radius: 10px;
+  border: 1px solid gray;
+}
+.submitButton {
+  width: 100%;
+  height: 5vh;
+  border-radius: 10px;
+  background-color: hsl(278, 68%, 11%);
+  color: white;
+}
+.date {
+  width: 50%;
+  float: left;
+}
+.cvc {
+  width: 50%;
+  float: left;
+}
+.date input {
+  width: 44%;
+  margin: 2px;
+  height: 5vh;
+  border-radius: 10px;
+  border: 1px solid gray;
+}
+.cvc input {
+  width: 100%;
+  height: 5vh;
+  border-radius: 10px;
+  border: 1px solid gray;
+  margin: 2px;
+}
+
+.afterSubmit {
+  text-align: center;
+  display: none;
+}
+
+.afterSubmit h3 {
+  letter-spacing: 2px;
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin: 20px;
+}
+.afterSubmit p {
+  color: gray;
+  font-size: 18px;
+  margin: 20px;
+
+}
+
+.afterSubmit button {
+  width: 100%;
+  height: 5vh;
+  border-radius: 10px;
+  background-color: hsl(278, 68%, 11%);
+  color: white; 
+  font-family: "Space Grotesk";
+
+}
+
+@media only screen and (max-width: 400px) {
+  .left {
+    width: 100vw;
+    height: 30vh;
+  }
+  .right {
+    width: 100vw;
+    height: 70vh;
+  }
+  .cardFront {
+    top: 14.4%;
+    left: 5%;
+    width: 80%;
+    height: 20%;
+    z-index: 23;
+  }
+
+  .cardFront h1 {
+    font-size: 18px;
+  }
+
+  .cardBack {
+    width: 80%;
+    height: 20%;
+    top: 3%;
+    right: 25%;
+  }
+  .cardData {
+    width: 90%;
+  }
+} ;

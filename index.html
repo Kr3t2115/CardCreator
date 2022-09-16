@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>CC</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <!-- 0000 0000 0000 0000 Jane Appleseed 00/00 000 Cardholder Name e.g. Jane
+    Appleseed Card Number e.g. 1234 5678 9123 0000 Exp. Date (MM/YY) MM YY CVC
+    e.g. 123 Confirm
+
+
+    Thank you! We've added your card details Continue -->
+
+    <div class="main">
+      <div class="left">
+        <div class="cardFront">
+          <svg
+            width="84"
+            height="47"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff" />
+            <path
+              d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z"
+              stroke="#fff"
+            />
+          </svg>
+
+          <h1 id="numberOnCard">0000 0000 0000 0000</h1>
+          <h3 id="nameOnCard">JANE APPLESEED</h3>
+          <h4 id="date">
+            <span id="monthOnCard">00</span>/<span id="yearOnCard">00</span>
+          </h4>
+        </div>
+        <div class="cardBack">
+          <h3 id="cvcOnCard">000</h3>
+        </div>
+      </div>
+      <div class="right">
+        <div class="cardData" id="formDiv">
+          <label>CARDHOLDER NAME</label>
+          <br />
+          <input
+            type="text"
+            id="inputName"
+            placeholder=" e.g.Jane Appleseed"
+            required
+            class="inputAllSize"
+            title="write yours here"
+            onkeyup="writeToElement('name')"
+          />
+          <br />
+
+          <span id="nameError">Please write correct name !!!</span>
+          <br />
+          
+          <label>CARD NUMBER</label>
+          <input
+            type="text"
+            id="inputNumber"
+            required
+            placeholder="e.g. 1234 5678 9123 0000"
+            class="inputAllSize"
+            onkeyup="writeToElement('cardNumber')"
+          />
+          <br />
+          <span id="numberError">Please write correct number !!!</span>
+
+          <br />
+
+          <div class="date">
+            <label>Exp. Date (MM/YY)</label>
+            <br />
+            <input
+              type="number"
+              min="1"
+              max="12"
+              placeholder="MM"
+              required
+              onkeyup="writeToElement('month')"
+              id="inputMonth"
+            />
+            <input
+              type="number"
+              required
+              placeholder="YY"
+              min="22"
+              max="99"
+              onkeyup="writeToElement('year')"
+              id="inputYear"
+            />
+
+            <span id="dateError">Please write correct date !!!</span>
+          </div>
+
+          <div class="cvc">
+            <label>CVC</label>
+            <input
+              type="number"
+              placeholder="e.g. 123"
+              required
+              size="3"
+              onkeyup="writeToElement('cvc')"
+              id="inputCvc"
+            />
+
+            <span id="cvcError">Please write correct cvc !!!</span>
+          </div>
+          <br />
+          <br />
+
+          <br />
+          <br />
+          <input
+            type="submit"
+            value="Confirm"
+            class="submitButton"
+            onclick="submit()"
+          />
+        </div>
+
+        <div class="afterSubmit" id="submitedDiv">
+          <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="40" fill="url(#a)"/><path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3"/><defs><linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse"><stop stop-color="#6348FE"/><stop offset="1" stop-color="#610595"/></linearGradient></defs></svg>
+            <h3>THANK YOU!</h3>
+
+            <p>We`ve added your card details.</p>
+
+            <button>Continue</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
